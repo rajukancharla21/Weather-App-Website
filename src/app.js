@@ -2,6 +2,7 @@ const path=require('path')
 const hbs=require('hbs')
 const express=require('express')
 const app=express()
+const port=process.env.PORT || 3000
 const publicPath= path.join(__dirname,'../public')
 const viewPath=path.join(__dirname,'../templates/views')
 const partialPath=path.join(__dirname,'../templates/partial')
@@ -57,6 +58,6 @@ app.get('/weather',(req,res)=>{
 app.get('*',(req,res)=>{
     res.send("404 Error")
 })
-app.listen(3000,()=>{
-    console.log("Server is Up..")
+app.listen(port,()=>{
+    console.log("Server is Up on "+port+"..")
 })
