@@ -47,7 +47,7 @@ app.get('/weather',(req,res)=>{
             }
             else{
                 res.send({
-                    forecast:data.weather[0].description+' in '+location+' with '+data.temperatue+' F Temperature',
+                    forecast:data.weather[0].description+' in '+location+' with '+data.temperatue+' F Temperature at a wind speed of '+data.wind+' m/s',
                     address:req.query.address
                 })
             }

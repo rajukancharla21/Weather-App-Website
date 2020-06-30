@@ -12,7 +12,8 @@ const weathercode=(latitude,longitude,callback)=>{
         callback(undefined,{
             weather:response.body.weather,
             temperatue:response.body.main.temp,
-            country: response.body.sys.country
+            country: response.body.sys.country,
+            wind: response.body.wind.speed
         })
         
     }
